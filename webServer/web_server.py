@@ -596,65 +596,6 @@ class WebServer:
 
 #-------------------------------------------------------------------------
 
-
-    # def getData(self, _data):
-    #     #_data = self.getData('Тема', 'Женщины','Сатья', 3)
-    #     _names = [{'id': c, 'name': c} for c in _data.columns]
-    #     self._oldDataTabe = self.maketTable(_names, _data.to_dict('records'))
-    #     print('maket:', len(self._oldDataTabe.data), self._oldDataTabe)
-    #     return self._oldDataTabe
-
-    # def getData(self, theme, gender, group, size):
-    #     if theme == 'theme': theme = 'common'
-    #     db = DataBase('iskin', 'PSYCHO')
-    #     tab = db.getTabDF('PSYCHO', gender, group, size)
-    #    # print('DATA:',tab)
-    #     return tab
-
-    # def maketTable(self, _columns, _data):
-    #     _tab = dash_table.DataTable(
-    #         id='tab-interactiv',
-    #         columns=_columns,
-    #         data=_data,
-    #         editable=True,
-    #         fill_width=False,
-    #         #page_count = 1,
-    #        # fixed_rows = 10,
-    #         sort_action="native",
-    #         sort_mode="multi",
-    #         column_selectable="multi", #"single",
-    #         row_selectable="single",
-    #         row_deletable=True,
-    #         selected_rows=[],
-    #         page_action="native",
-    #         page_current=0,
-    #         page_size=12,
-    #         style_header={'backgroundColor': 'black', 'color': 'yellow','border': '1px solid gray'},
-    #         style_data={'backgroundColor': 'black', 'color': 'silver', 'whiteSpace': 'normal',
-    #                     'height': 'auto','lineHeight': '18px','border': '1px solid gray' },
-    #         style_cell={'textAlign': 'left', 'overflow': 'hidden','textOverflow': 'ellipsis'},
-    #         style_cell_conditional=[
-    #             {'if': {'column_id': 'Gender'},'maxWidth': 45},
-    #             {'if': {'column_id': 'Theme'}, 'maxWidth': 120},
-    #             {'if': {'column_id': '_Group'},'maxWidth': 50},
-    #             {'if': {'column_id': 'Quest'}, 'maxWidth': 300},
-    #             {'if': {'column_id': 'ClrQuest'},'maxWidth': 100},
-    #             {'if': {'column_id': 'ClrAnswer'},'maxWidth': 200},
-    #             {'if': {'column_id': 'Noverbal'},'maxWidth': 50},
-    #             {'if': {'column_id': 'Answer'},'maxWidth': 400},
-    #             {'if': {'column_id': 'Marker'},'maxWidth': 10},
-    #             {'if': {'column_id': 'Other'}, 'maxWidth': 50},
-    #
-    #             {'if': {'column_id': 'dt'}, 'maxWidth': 50},
-    #             {'if': {'column_id': 'version'}, 'maxWidth': 20},
-    #         ],
-    #         style_as_list_view = False,
-    #         #virtualization=True,   ,'minWidth': '130px', 'width': '150px', '': '180px
-    #        #active_cell = None,
-    #         #data={},
-    #     )
-    #     return _tab
-
 def getData():
 
     lst = [{'id': 12345, 'name': 'ivan', 'curence': 1234}, {'id': 65845, 'name': 'fedja', 'curence': 75859}]
@@ -670,11 +611,5 @@ def getData():
 #--------------------------------------------------------------------------
 
 if __name__ == '__main__':
-   # path = "/path/to/file.txt"
-   # dirname = os.path.dirname(path)
+    ws = WebServer()
 
-   # print('dirname:',dirname)
-
-   # ws = WebServer()
-    df = getData()
-    print('DF:',df)
